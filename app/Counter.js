@@ -1,5 +1,5 @@
 import React from 'react';
-import {increment} from './reducer';
+import {increment} from './counterReducer';
 import {connect} from 'react-redux';
 
 const CounterBase = ({count, increment}) => {

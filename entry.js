@@ -3,7 +3,7 @@ require('bootstrap');
 
 import React from 'react';
 import ReactDOM from "react-dom";
-import {reducer, incrementEpic} from './app/reducer';
+import {reducer} from './app/counterReducer';
 import userReducer, {userEpic} from './app/userReducer';
 
 import App from './app/App';
@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createEpicMiddleware, combineEpics } from 'redux-observable';
 
-const rootEpic = combineEpics(incrementEpic, userEpic);
+const rootEpic = combineEpics(userEpic);
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 
